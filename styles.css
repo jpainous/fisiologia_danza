@@ -1,0 +1,522 @@
+/* Reset i estils base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden;
+    line-height: 1.6;
+}
+
+/* Contenidor principal */
+.slideshow-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Diapositives */
+.slide {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    overflow-y: auto;
+    animation: fadeEffect 0.8s;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contingut de la diapositiva */
+.slide-content {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    max-width: 1200px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.slide-content.title-slide {
+    text-align: center;
+}
+
+/* Títols */
+h1 {
+    color: #667eea;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #764ba2;
+    font-size: 2.2em;
+    margin: 30px 0 20px 0;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #555;
+    font-size: 1.5em;
+    margin: 20px 0 10px 0;
+}
+
+h4 {
+    color: #667eea;
+    font-size: 1.2em;
+    margin: 15px 0 10px 0;
+}
+
+/* Text */
+p, li {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333;
+    margin: 10px 0;
+}
+
+ul, ol {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+/* Subtítol */
+.subtitle {
+    font-size: 1.3em;
+    color: #666;
+    margin: 30px 0;
+    font-style: italic;
+}
+
+/* Layouts */
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.grid-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.column {
+    padding: 10px;
+}
+
+/* Caixes informatives */
+.info-box {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+}
+
+.info-box.warning {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    border-left: 5px solid #ff6b6b;
+}
+
+.info-box.success {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    border-left: 5px solid #00b894;
+}
+
+.example-box {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid #fdcb6e;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-box {
+    background: linear-gradient(120deg, #ffeaa7 0%, #ffeaa7 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px 0;
+    border-left: 5px solid #fdcb6e;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-box.warning {
+    background: linear-gradient(120deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+    border-left: 5px solid #c0392b;
+}
+
+.highlight-box.warning h4 {
+    color: white;
+}
+
+.note-box {
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    border-left: 5px solid #a29bfe;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.activity-box {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.activity-box h4 {
+    color: white;
+    margin-top: 0;
+}
+
+/* Taules */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.data-table th,
+.data-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+.data-table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.data-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Llistes numerades */
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.number-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.number-item:hover {
+    transform: translateX(10px);
+}
+
+.number {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    flex-shrink: 0;
+}
+
+.number-item p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* Navegació */
+.navigation {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.nav-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.nav-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.nav-button:active {
+    transform: translateY(-1px);
+}
+
+.nav-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Comptador de diapositives */
+.slide-counter {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    color: #667eea;
+    font-size: 1.1em;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Scrollbar personalitzat */
+.slide-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.slide-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.slide-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+}
+
+.slide-content::-webkit-scrollbar-thumb:hover {
+    background: #764ba2;
+}
+
+/* Responsivitat */
+@media (max-width: 1024px) {
+    .grid-4,
+    .grid-5 {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .slide-content {
+        padding: 40px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .two-columns,
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-5 {
+        grid-template-columns: 1fr;
+    }
+    
+    .slide {
+        padding: 20px;
+    }
+    
+    .slide-content {
+        padding: 30px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    h3 {
+        font-size: 1.3em;
+    }
+    
+    p, li {
+        font-size: 1em;
+    }
+    
+    .navigation {
+        padding: 0 20px;
+    }
+    
+    .nav-button {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+    
+    .slide-counter {
+        top: 20px;
+        right: 20px;
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-content {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+    }
+    
+    .nav-button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}
+
+/* Animacions addicionals */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.info-box,
+.example-box,
+.highlight-box,
+.note-box,
+.activity-box {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+/* Estils per a checkboxes i camps de formulari */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Impressió */
+@media print {
+    .navigation,
+    .slide-counter {
+        display: none;
+    }
+    
+    .slide {
+        page-break-after: always;
+        height: auto;
+        overflow: visible;
+    }
+    
+    body {
+        background: white;
+    }
+}
